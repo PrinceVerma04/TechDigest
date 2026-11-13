@@ -11,7 +11,8 @@ from bs4 import BeautifulSoup
 import re
 
 app = Flask(__name__)
-CORS(app)
+# Comma-separated list of frontend origins allowed to call this API
+CORS(app, origins=[o.strip() for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",") if o.strip()])
 
 # Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///tech_news.db')

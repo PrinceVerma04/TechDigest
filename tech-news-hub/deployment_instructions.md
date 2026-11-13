@@ -32,6 +32,7 @@ This combination provides the best free-tier experience with automatic deploymen
    - Add any additional variables if needed:
      ```
      FLASK_ENV=production
+     ALLOWED_ORIGINS=https://your-frontend-domain.vercel.app
      ```
 
 4. **Deploy**
@@ -98,6 +99,7 @@ This combination provides the best free-tier experience with automatic deploymen
      ```
      DATABASE_URL=postgresql://user:pass@host:port/dbname
      FLASK_ENV=production
+     ALLOWED_ORIGINS=https://your-frontend-domain.vercel.app
      ```
 
 ### Frontend Deployment (Vercel)
